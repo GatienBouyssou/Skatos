@@ -1,6 +1,8 @@
 CM2104 Group Project Repository
 # Skatos.tv
 
+Skatos is a webtsite that helps you listing all the movies you are watching, you've watched and the movies you are dying to watch. With the help of IMDB it also provides valuable information on the movie/series you are looking for. The prototype directory contains the mockups corresponding to the project. If you want to test it please do !
+
 ## How to launch the project
 #### Prerequisites
   - Install the last version of Node.js and NPM (very important on Codio)
