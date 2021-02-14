@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Compiled and minified CSS -->
+    <link href="../../../public/stylesheets/Materialize/materialize.min.css" rel="stylesheet"/>
+    <link href="../../../public/stylesheets/MainNavigation/Pages/HomePage/HomePage.css" rel="stylesheet"/>
+    <link href="../../../public/stylesheets/MainNavigation/Components/CustomCarousel/CustomCarousel.css" rel="stylesheet"/>
+    <link href="../../../public/stylesheets/MainNavigation/Components/CustomModal/CustomModal.css" rel="stylesheet"/>
+    <link href="../../../public/stylesheets/MainNavigation/Components/CustomSearchBar/CustomSearchBar.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <section>
+      <nav class="transparent z-depth-0 valign-wrapper">
+        <ul class="collapsible hoverable custom-searchbar">
+          <li>
+            <div class="collapsible-header valign-wrapper"><i class="material-icons">search</i>
+              <input id="search-movie" type="" placeholder="Search..."/>
+            </div>
+            <div class="collapsible-body">
+              <ul class="collection">
+                <li class="collection-item avatar valign-wrapper">
+                  <i class="material-icons circle red">local_movies</i>
+                  <span class="title">Title</span>
+                  <a href="#!" class="waves-effect secondary-content"><i class="material-icons">access_time</i></a>
+                </li>
+                <li class="collection-item avatar valign-wrapper">
+                  <i class="material-icons circle blue">live_tv</i>
+                  <span class="title">Title</span>
+                  <a href="#!" class="waves-effect secondary-content"><i class="material-icons">access_time</i></a>
+                </li>
+                <li class="collection-item avatar valign-wrapper">
+                  <i class="material-icons circle green">person</i>
+                  <span class="title">Name</span>
+                  <a href="#!" class="waves-effect secondary-content"><i class="material-icons">person_add</i></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="overlay"></div>
+      </nav>
+
+      <div class="watching-list">
+        <h6>CURRENTLY WATCHING</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+              <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+          </div>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <img class="responsive-img poster z-depth-2" src="../../../public/images/posters/punisher_poster.jpg">
+                  <div class="card-text">
+                    <span class="movie-title">Marvel's The Punisher</span>
+                      <div>
+                        <span class="movie-progress">E4S2</span>
+                      </div>
+                    </div>
+                  <a class="btn-floating btn-large waves-effect waves-light fab deep-purple accent-4"><i class="material-icons">fast_forward</i></a>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <img class="responsive-img poster z-depth-2" src="../../../public/images/posters/got_poster.jpg">
+                  <div class="card-text">
+                    <span class="movie-title">Games of Thrones</span>
+                      <div>
+                        <span class="movie-progress">E3S5</span>
+                      </div>
+                    </div>
+                  <a class="btn-floating btn-large waves-effect waves-light fab deep-purple accent-4"><i class="material-icons">fast_forward</i></a>
+              </div>
+            </div>
+          </a>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="unwatching-list">
+        <h6>WATCH LATER</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+              <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+          </div>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/glass_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Glass</span><span class="movie-date">(2019)</span></div>
+                      <span class="movie-director">M. Night Shyamalan</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/batman_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Batman</span><span class="movie-date">(2005)</span></div>
+                      <span class="movie-director">Christopher Nolan</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/superman_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Man of steel</span><span class="movie-date">(2013)</span></div>
+                      <span class="movie-director">Zack Snyder</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/starwars_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Star Wars</span><span class="movie-date">(1977)</span></div>
+                      <span class="movie-director">George Lucas</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/startrek_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Star Trek</span><span class="movie-date">(2009)</span></div>
+                      <span class="movie-director">J.J. Abrams</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/ironman_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Iron man</span><span class="movie-date">(2008)</span></div>
+                      <span class="movie-director">Jon Favreau</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="watching-list">
+        <h6>FRIENDS WATCHING</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+              <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+          </div>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                    <img class="responsive-img poster z-depth-2" src="../../../public/images/posters/punisher_poster.jpg">
+                    <div class="card-text">
+                        <span class="movie-title">Marvel's The Punisher</span>
+                        <div>
+                          <span class="movie-progress">E4S2</span>
+                        </div>
+                    </div>
+                    <img class="responsive-img circle profile z-depth-2" src="../../../public/images/profiles/tim.jpeg">
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                    <img class="responsive-img poster z-depth-2" src="../../../public/images/posters/got_poster.jpg">
+                    <div class="card-text">
+                        <span class="movie-title">Game of Thrones</span>
+                        <div>
+                          <span class="movie-progress">E7S7</span>
+                        </div>
+                    </div>
+                    <img class="responsive-img circle profile z-depth-2" src="../../../public/images/profiles/gatien.jpeg">
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                    <img class="responsive-img poster z-depth-2" src="../../../public/images/posters/himym_poster.jpg">
+                    <div class="card-text">
+                        <span class="movie-title">How I Met Your Mother</span>
+                        <div>
+                          <span class="movie-progress">E5S2</span>
+                        </div>
+                    </div>
+                    <img class="responsive-img circle profile z-depth-2" src="../../../public/images/profiles/nauris.jpeg">
+              </div>
+            </div>
+          </a>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="unwatching-list">
+        <h6>UPCOMMING MOVIES</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)"><i class="material-icons">keyboard_arrow_left</i></a>
+          </div>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/glass_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Glass</span><span class="movie-date">(2019)</span></div>
+                      <span class="movie-director">M. Night Shyamalan</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/batman_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Batman</span><span class="movie-date">(2005)</span></div>
+                      <span class="movie-director">Christopher Nolan</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/superman_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Man of steel</span><span class="movie-date">(2013)</span></div>
+                      <span class="movie-director">Zack Snyder</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/starwars_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Star Wars</span><span class="movie-date">(1977)</span></div>
+                      <span class="movie-director">George Lucas</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/startrek_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Star Trek</span><span class="movie-date">(2009)</span></div>
+                      <span class="movie-director">J.J. Abrams</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="modal-trigger" href="#modalDetails">
+            <div class="carousel-item">
+              <div class="card hoverable">
+                <div class="card-image">
+                    <img class="responsive-img" src="../../../public/images/backdrops/ironman_backdrop.jpg">
+                    <div class="card-text">
+                      <div><span class="movie-title">Iron man</span><span class="movie-date">(2008)</span></div>
+                      <span class="movie-director">Jon Favreau</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)"><i class="material-icons">keyboard_arrow_right</i></a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Modal Movie Details -->
+      <div id="modalDetails" class="modal bottom-sheet z-depth-0">
+        <div class="modal-content z-depth-2">
+          <img class="responsive-img poster z-depth-2" src="../../../public/images/posters/punisher_poster.jpg">
+          <div class="action-list valign-wrapper">
+            <a class="btn-floating btn-large waves-effect waves-light red favorite-btn"><i class="material-icons">favorite_border</i></a>
+            <p class="movie-state-container deep-purple accent-4 z-depth-1 waves-effect waves-light">
+              <label>
+                <input id="indeterminate-checkbox" type="checkbox"/>
+                <span>WATCHED</span>
+              </label>
+            </p>
+          </div>
+          <div class="movie-titles">
+            <span class="title">Marvel's The Punisher</span><br>
+            <span class="date">(2017)</span>
+          </div>
+          <i class="material-icons close" onclick=" $('.modal').modal('close')">close</i>
+          <div class="movie-overview">
+            <h6 class="title">OVERVIEW</h6>
+            <span class="overview">A former Marine out to punish the criminals responsible for his family's murder finds himself ensnared in a military conspiracy.</span>
+            <div class="director">
+                <img class="responsive-img circle" src="../../../public/images/person.png"/>
+                <div class="name">
+                  <span class="title">Steve Lightfoot</span><br>
+                  <span>Creator</span>
+                </div>
+            </div>
+          </div>
+          <div class="cast">
+            <h6 class="title">CASTING</h6>
+            <div class="cast-list">
+              <div class="cast-item">
+                <img class="responsive-img circle" src="../../../public/images/person.png"/>
+                <div class="name">
+                  <span class="title">Steve Lightfoot</span><br>
+                </div>
+              </div>
+              <div class="cast-item">
+                <img class="responsive-img circle .center-align" src="../../../public/images/person.png"/>
+                <div class="name">
+                  <span class="title">Steve Lightfoot</span>
+                </div>
+              </div>
+              <div class="cast-item">
+                <img class="responsive-img circle .center-align" src="../../../public/images/person.png"/>
+                <div class="name">
+                  <span class="title">Steve Lightfoot</span>
+                </div>
+              </div>
+              <div class="cast-item">
+                <img class="responsive-img circle .center-align" src="../../../public/images/person.png"/>
+                <div class="name">
+                  <span class="title">Steve Lightfoot</span>
+                </div>
+              </div>
+              <div class="cast-item">
+                <img class="responsive-img circle .center-align" src="../../../public/images/person.png"/>
+                <div class="name">
+                  <span class="title">Steve Lightfoot</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="../../../public/javascripts/Materialize/materialize.min.js"></script>
+    <script src="../../../public/javascripts/Materialize/init.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Pages/HomePage/HomePage.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Components/CustomCarousel/CustomCarousel.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Components/CustomModal/CustomModal.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Components/CustomSearchBar/CustomSearchBar.js"></script>
+  </body>
+</html>

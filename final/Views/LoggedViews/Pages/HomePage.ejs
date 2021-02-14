@@ -1,0 +1,132 @@
+<section>
+  <nav class="transparent z-depth-0 valign-wrapper">
+    <ul class="collapsible hoverable custom-searchbar">
+      <li>
+        <div class="collapsible-header valign-wrapper"><i class="material-icons">search</i>
+          <input id="search-movie" type="" placeholder="Search..."/>
+        </div>
+        <div class="collapsible-body">
+          <ul class="collection">
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="overlay"></div>
+  </nav>
+
+  <div class="watching-list">
+    <h6>CURRENTLY WATCHING</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <div id="currentSeries">
+        <% if (startedSeries.length === 0) { %>
+          <div class="carousel-item"></div>
+        <% } else { %>
+          <% startedSeries.forEach(function(movie) { %>
+            <% include ../../Components/Carousel/nextCard %>
+          <% }) %>
+        <% } %>
+      </div>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="unwatching-list">
+    <h6>MOVIES TO WATCH LATER</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <div id="watchLaterMovieContainer">
+        <% if (watchLaterMovies.length === 0) { %>
+          <div class="carousel-item"></div>
+        <% } else { %>
+          <% watchLaterMovies.forEach(function(movie) { %>
+            <% include ../../Components/Carousel/removableCardMovie %>
+          <% }) %>
+        <% } %>
+      </div>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="unwatching-list">
+    <h6>SERIES TO WATCH LATER</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <div id="watchLaterSeriesContainer">
+        <% if (watchLaterSeries.length === 0) { %>
+          <div class="carousel-item"></div>
+        <% } else { %>
+          <% watchLaterSeries.forEach(function(movie) { %>
+            <% include ../../Components/Carousel/removableCardTvShow %>
+          <% }) %>
+        <% } %>
+      </div>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="watching-list">
+    <h6>YOUR FRIENDS ARE WATCHING</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <% if (friends.length === 0) { %>
+        <div class="carousel-item"></div>
+      <% } else { %>
+        <% friends.forEach(function(friend) { %>
+          <% include ../../Components/Carousel/friendCurrWatching %>
+        <% }) %>
+      <% } %>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="unwatching-list">
+    <h6>UPCOMING MOVIES</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)"><i class="material-icons">keyboard_arrow_left</i></a>
+      </div>
+      <% if (upcomingMovies.length === 0) { %>
+        <div class="carousel-item"></div>
+      <% } else { %>
+        <% upcomingMovies.forEach(function(movie) { %>
+          <% include ../../Components/Carousel/showItemWithPopup %>
+        <% }) %>
+      <% } %>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)"><i class="material-icons">keyboard_arrow_right</i></a>
+      </div>
+    </div>
+  </div>
+
+  <%- include ../../Components/Modals/ModalReceiver -%>
+
+</section>

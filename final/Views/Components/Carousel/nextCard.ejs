@@ -1,0 +1,16 @@
+<a id="<%= movie.id %>_tv" class="modal-trigger removable">
+    <div class="carousel-item">
+        <div class="card hoverable">
+            <img class="responsive-img poster z-depth-2" src="http://image.tmdb.org/t/p/w342/<%=movie.poster_path%>">
+            <div class="card-text">
+                <span class="movie-title"><%=movie.name%></span>
+                <div>
+                    <span class="movie-progress" data-position="bottom" data-tooltip="<%= movie.curSeason %>">S<%= movie.seasonNumber%>E<%= movie.curEpisode %></span><br>
+                </div>
+            </div>
+            <a class="btn-floating btn-large waves-effect waves-light fab deep-purple accent-4 nextEpisode"><i class="material-icons">fast_forward</i></a>
+            <i class="material-icons remove-current-item">delete</i>
+        </div>
+    </div>
+</a>
+

@@ -1,0 +1,36 @@
+.slidingPanel{
+    position: fixed;
+    top: 0;
+    background-color:rgb(255, 255, 255);
+    width: 60%;
+    height: 100vh;
+    display: none;
+    z-index: 100;
+    transform-origin: left;
+}
+
+.slidingPanel .show{
+    display: block;
+    border-radius: 0 10px 10px 0;
+}
+
+.slidingPanel .show > .closeBtn{
+    animation: show-btn .5s .5s forwards;
+}
+
+
+
+@keyframes show-btn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .slidingPanel{
+        width: 100%;
+    }
+}

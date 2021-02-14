@@ -1,0 +1,60 @@
+<i class="material-icons close" onclick=" $('.modal').modal('close')">close</i>
+<% if(locals.session.login) { %>
+<div class="action-list valign-wrapper">
+    <a id="<%= movie.id %>_tv" class="btn-floating btn-large waves-effect waves-light red favorite-btn">
+        <% if (isFavorite) { %>
+            <i class="material-icons">favorite</i>
+        <% } else {%>
+            <i class="material-icons">favorite_border</i>
+        <% } %>
+    </a>
+    <p>
+        <% if (isStarted) { %>
+            <label id="<%= movie.id %>_watchedBtn">
+                <input id="tv_checkbox" type="checkbox" <%if (isWatched) {%>checked<%}%>/>
+                <span>WATCHED</span>
+            </label>
+        <% } else {%>
+            <a id="<%= movie.id %>_startBtn" class="started-btn waves-effect waves-light deep-purple accent-4 movie-state-container z-depth-1"><i class="material-icons left">play_arrow</i>START</a>
+        <% } %>
+    </p>
+</div>
+<% } %>
+<div class="modal-header">
+    <img class="responsive-img poster z-depth-2" src="http://image.tmdb.org/t/p/w342/<%= movie.poster_path %>">
+    <div class="movie-titles">
+        <span class="title"><%= movie.name %></span><br>
+        <span class="date">(<%= getYear(movie.first_air_date)%>)</span>
+    </div>
+    <div class="rating">
+        <canvas id="canvas"><%= movie.vote_average %></canvas>
+    </div>
+</div>
+<div class="modal-details">
+    <div class="movie-overview">
+        <h6 class="title">OVERVIEW</h6>
+        <span class="overview"><%= movie.overview %></span>
+        <div class="director">
+            <img class="responsive-img circle" src="/images/profiles/person.png"/>
+            <div class="name">
+                <span class="title">Steve Lightfoot</span><br>
+                <span>Creator</span>
+            </div>
+        </div>
+    </div>
+    <div class="cast">
+        <h6 class="title">Seasons</h6>
+        <div class="cast-list">
+            <% movie.seasons.forEach(function (season) {%>
+                <div class="cast-item">
+                    <img class="responsive-img circle" src="http://image.tmdb.org/t/p/w342/<%= season.poster_path %>"/>
+                    <div class="name">
+                        <span class="title"><%= season.name %></span><br>
+                        <span class="title"><%= season.episode_count %> episodes</span><br>
+                        <span class="date">(<%= getYear(season.air_date)%>)</span>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+    </div>
+</div>

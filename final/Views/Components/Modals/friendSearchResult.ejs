@@ -1,0 +1,7 @@
+<% friends.forEach(function(friend) { %>
+    <li id="<%= friend.name %>" class="collection-item avatar valign-wrapper">
+        <img src="/images/profiles/<%= friend.profilePicture %>" class="circle"\>
+        <span class="title"><%= friend.name %></span>
+        <a id="addFriend" href="#!" class="waves-effect secondary-content"><i class="material-icons">person_add</i></a>
+    </li>
+<% }); %>

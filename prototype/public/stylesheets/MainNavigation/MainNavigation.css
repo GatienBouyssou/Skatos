@@ -1,0 +1,80 @@
+.sidenav {
+    height: 100%
+}
+
+.sidenav .identification {
+    margin-top: 20%;
+    margin-bottom: -5%;
+    text-align: center
+}
+
+.sidenav .identification .chip {
+    width: 10em !important;
+    cursor: pointer
+}
+
+.sidenav .background img {
+    width: 100%
+}
+
+.sidenav .button {
+    padding: 0 5%
+}
+
+.sidenav .button .btn {
+    text-align: left
+}
+
+.sidenav .button .btn i {
+    color: white
+}
+
+.sidenav .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.sidenav .divider {
+    margin: 5%
+}
+
+.fake-nav {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+#settingsPanel {
+  width: 60%;
+}
+
+#settingsPanel iframe {
+  width: 100%;
+  height: 100%;
+  padding-left: 300px;
+}
+
+#PageContent {
+  width: 100%;
+  height: 100%;
+  padding-left: 300px;
+  border: none;
+  position: fixed;
+}
+
+.closeBtn {
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    iframe {
+        padding-left: 0
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  #settingsPanel {
+    width: 100%;
+  }
+}

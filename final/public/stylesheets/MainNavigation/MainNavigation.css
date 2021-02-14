@@ -1,0 +1,81 @@
+#slidenavPanel .identification {
+    margin-top: 20%;
+    margin-bottom: -5%;
+    text-align: center
+}
+
+#slidenavPanel #settings, #exit {
+    cursor: pointer;
+}
+
+#slidenavPanel #settings i, #exit i{
+    margin-top: 15%;
+}
+
+#slidenavPanel .background img {
+    width: 100%
+}
+
+#slidenavPanel .button {
+    padding: 0 5%
+}
+
+#slidenavPanel .button .btn {
+    text-align: left
+}
+
+#slidenavPanel .button .btn i {
+    color: white
+}
+
+#slidenavPanel .divider {
+    margin: 5%
+}
+#sidenav-trigger {
+    position: absolute;
+    left: 0;
+}
+
+.fake-nav {
+    position: absolute;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+#settingsPanel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#settingsContent {
+    width: 50%;
+    left: 300px;
+}
+
+#PageContent {
+  width: 100%;
+  height: 100%;
+  padding-left: 300px;
+  border: none;
+  position: fixed;
+  overflow: scroll;
+}
+
+@media only screen and (max-width: 992px) {
+    #PageContent {
+        padding-left: 0;
+    }
+    #settingsContent {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  #settingsContent {
+    width: 100%;
+  }
+}

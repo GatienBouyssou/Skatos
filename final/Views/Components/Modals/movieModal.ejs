@@ -1,0 +1,54 @@
+<i class="material-icons close">close</i>
+<% if(locals.session.login) { %>
+<div class="action-list valign-wrapper">
+    <a id="<%= movie.id %>_movie" class="btn-floating btn-large waves-effect waves-light red favorite-btn">
+        <% if (isFavorite) { %>
+            <i class="material-icons">favorite</i>
+        <% } else {%>
+            <i class="material-icons">favorite_border</i>
+        <% } %>
+    </a>
+    <p class="movie-state-container deep-purple accent-4 z-depth-1 waves-effect waves-light">
+        <label id="<%= movie.id %>">
+            <input id="movie_checkbox" type="checkbox" <%if (isWatched) {%>checked<%}%>/>
+            <span>WATCHED</span>
+        </label>
+    </p>
+</div>
+<% } %>
+<div class="modal-header">
+    <img class="responsive-img poster z-depth-2" src="http://image.tmdb.org/t/p/w342/<%= movie.poster_path %>">
+    <div class="movie-titles">
+        <span class="title"><%= movie.title %></span><br>
+        <span class="date">(<%= getYear(movie.release_date)%>)</span>
+    </div>
+    <div class="rating">
+        <canvas id="canvas"><%= movie.vote_average %></canvas>
+    </div>
+</div>
+<div class="modal-details">
+    <div class="movie-overview">
+        <h6 class="title">OVERVIEW</h6>
+        <span class="overview"><%= movie.overview %></span>
+        <div class="director">
+            <img class="responsive-img circle" src="/images/profiles/person.png"/>
+            <div class="name">
+                <span class="title">Steve Lightfoot</span><br>
+                <span>Creator</span>
+            </div>
+        </div>
+    </div>
+    <div class="cast">
+        <h6 class="title">PRODUCTION</h6>
+        <div class="cast-list">
+            <% movie.production_companies.forEach(function (company) {%>
+                <div class="cast-item">
+                    <img class="responsive-img circle" src="http://image.tmdb.org/t/p/w342/<%= company.logo_path %>"/>
+                    <div class="name">
+                        <span class="title"><%= company.name %></span><br>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+    </div>
+</div>

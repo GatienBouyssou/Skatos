@@ -1,0 +1,113 @@
+<i id="closeSettings" class="material-icons closeBtn">close</i>
+<div id="pageContainer">
+    <div class="centerElement">
+        <img id="profileImage" src="/images/profiles/<%= user.profilePicture %>" class="z-depth-3 pointer roundImage"/>
+    </div>
+    <!--Form that change the informations of an user-->
+    <form id="settingsFormContainer" class="col s12 m5 container">
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input id="usernameSignup" name="username" type="text" value="<%= user.name %>" class="validate valid">
+                <label for="usernameSignup" class="active">Username</label>
+            </div>
+        </div>
+        <%if (typeof errorUsername !== 'undefined') {%>
+        <div class="row">
+            <span class="errorLabel"><%=errorUsername%></span>
+        </div>
+        <%}%>
+
+<!--
+        <div class="row">
+            <div class="input-field col s12 m7">
+                <input id="firstName" name="firstname" type="password" class="validate">
+                <label for="firstName">First name</label>
+            </div>
+
+            <div class="input-field col s12 m5">
+                <input id="surname" name="surname" type="password" class="validate">
+                <label for="surname">Surname</label>
+            </div>
+        </div>
+-->
+
+        <div class="row">
+            <div class="input-field col s12 m12">
+                <input id="email" name="newEmail" type="email" value="<%= user.email %>" class="validate valid">
+                <label for="email" class="active">Your new email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m12">
+                <input id="confirm_email" name="confirmationEmail" type="email" value="<%= user.email %>" class="validate valid">
+                <label for="email" class="active">Your new email</label>
+            </div>
+        </div>
+        <%if (typeof errorEmail !== 'undefined') {%>
+            <div class="row">
+                <span class="errorLabel"><%=errorEmail%></span>
+            </div>
+
+        <%}%>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input id="passwordSignup" name="newPassword" type="password" class="validate">
+                <label for="passwordSignup">Your new Password</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+                <input id="passwordConfirm" name="confirmationPassword" type="password" class="validate">
+                <label for="passwordConfirm">Confirm your new password</label>
+            </div>
+        </div>
+        <%if (typeof errorPassword !== 'undefined') {%>
+        <div class="row">
+            <span class="errorLabel"><%=errorPassword%></span>
+        </div>
+
+        <%}%>
+        <div class="row">
+            <div class="input-field col s12 center-align">
+                <input id="submitButtonSettings" type="submit" class="btn waves-effect waves-teal deep-purple" value="Commit the changes">
+            </div>
+        </div>
+    </form>
+    <%if (typeof errorDuringChanges !== 'undefined') {%>
+        <div class="row">
+            <span class="errorLabel"><%=errorDuringChanges%></span>
+        </div>
+
+    <%}%>
+</div>
+
+<!--the upload popup will be show to change the profile image-->
+<div id="popupContainer" style="display: none;">
+    <div id="popup" class="row matchParent z-depth-3">
+        <div class="row">
+            <img id="closeImg" src="/images/icons/baseline_close_black_18dp.png" alt="close" class="pointer">
+        </div>
+        <form id="uploadForm" class="uploadingBox matchParent leaveSpaceTop" method="post" action="/changeImg" enctype="multipart/form-data">
+            <div id="fileUploaderDiv" class="greyDashedBorder">
+                <input id="fileUploader" class="matchParent" name="file" type="file" ><br>
+            </div>
+            <dib id="informationLabels" class="informationUpload">
+                <span id="duringUpload" class="informationLabel">Drop to upload</span>
+                <span id="errorUpload" class="errorLabel">We couldn't import your image for some reason</span><br>
+                <label id="labelUpload"  for="fileUploader"><strong class="pointer">Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+
+            </dib>
+
+        </form>
+        <!--Confirmation popup appear after the upload of an image to confirm the changes-->
+        <div id="confirmationScreen" class="row" >
+            <div class="row">
+                <span class="successfulLabel center centerElement">Image successfully uploaded !</span>
+            </div>
+            <img id="previewImage" src="" class="roundImage center-block leaveSpaceTop">
+            <div id="popupButtons" class="row leaveSpaceTop">
+                <button id="cancelBtn" class="col s12 btn waves-effect waves-teal deep-purple">Cancel import</button>
+                <button id="changeBtn" class="col s12 btn waves-effect waves-teal deep-purple">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

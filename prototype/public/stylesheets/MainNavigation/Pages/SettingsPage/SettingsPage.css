@@ -1,0 +1,208 @@
+/*CSS of the Settings page without the popup*/
+
+/*Need that to give a dark effect to the opacity*/
+.backgroundPopup{
+    background: black;
+    overflow: hidden;
+}
+
+#profileImage {
+    position: relative;
+    top:-150px;
+    transition: .5s;
+}
+
+.centerElement {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+#profileImage:hover{
+    transform: scale(1.1);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.z-depth-4 {
+    box-shadow: white;
+}
+
+#pageContainer {
+    background-color: white;
+}
+
+#pageContainer input[type="submit"]{
+    color: white;
+}
+
+#coverImage {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#settingsFormContainer {
+    margin-top: -5%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 60%; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+}
+
+.blackAndWhite {
+    padding: 5px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+}
+#popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+#closeImg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
+
+.matchParent {
+    width: 100%;
+    height: 100%;
+}
+
+/*CSS for the popup*/
+
+#fileUploader {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.informationUpload  {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#labelUpload strong {
+    color: blue;
+}
+
+#fileUploaderDiv {
+    margin-top: 30px;
+    width: 100%;
+    height: 200px;
+}
+
+/*Border colors that will change if someone drag a file into the box*/
+
+.greyDashedBorder {
+    border: dashed 2px grey;
+    background-color: #e9e9e9;
+}
+
+.redDashedBorder {
+    outline: 3px dashed red;
+    background-color: white;
+}
+
+/*label are triggered in the ondrag and change depending on the situation*/
+
+.successfulLabel {
+    color: green;
+    font-weight: bold;
+}
+
+.informationLabel {
+    color: grey;
+    font-weight: bold;
+}
+
+.errorLabel {
+    color: red;
+    font-weight: bold;
+}
+
+.leaveSpaceTop {
+    margin-top: 40px;
+}
+
+#cancelBtn {
+    margin-right: 50px;
+}
+
+.roundImage {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+#popup {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+}
+
+#uploadForm {
+    margin-top: 40px;
+}
+
+#confirmationScreen {
+    margin-top: 40px;
+}
+
+/*Adapt the size of the profile picture depending on the size of the screen*/
+
+@media screen and (min-width: 767px) {
+    .roundImage {
+        width: 300px;
+        height: 300px;
+    }
+
+    #popupButtons {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .roundImage {
+        width: 150px;
+        height: 150px;
+    }
+
+    #profileImage {
+        top: -75px;
+    }
+
+    #popup {
+        padding: 5px;
+    }
+
+    #changeBtn {
+        margin-top: 20px;
+    }
+}

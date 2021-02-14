@@ -1,0 +1,85 @@
+<i id="closeFriend" class="material-icons closeBtn">close</i>
+<section>
+    <header class="center-align animated">
+        <img class="circle responsive-img z-depth-3 animated" src="/images/profiles/<%= profilePicture %>"/>
+        <% if (locals.session.login != _id) { %>
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 delBtn">
+                <% if (hasThisFriend) { %>
+                    <i class="material-icons" id="removeBtn">remove</i>
+                <% } else { %>
+                    <i class="material-icons" id="removeBtn">add</i>
+                <% } %>
+            </a>
+        <% } %>
+        <h3><b id="friendName"><%= name %></b></h3>
+    </header>
+
+  <!-- Favorite movies -->
+  <div class="unwatching-list animated">
+    <h6>FAVORITE MOVIES</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+        <% if (favMovies.length === 0) { %>
+            <div class="carousel-item"></div>
+        <% } else { %>
+            <% favMovies.forEach(function(movie) { %>
+                <% include ../../Components/Carousel/showItemWithPopup %>
+            <% }) %>
+        <% } %>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Favorite series -->
+  <div class="unwatching-list animated">
+    <h6>FAVORITE SERIES</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+        <% if (favSeries.length === 0) { %>
+            <div class="carousel-item"></div>
+        <% } else { %>
+            <% favSeries.forEach(function(movie) { %>
+                <% include ../../Components/Carousel/showTVShowWithPopup %>
+            <% }) %>
+        <% } %>
+    </div>
+  </div>
+
+  <!-- Friends list -->
+  <div>
+      <div class="friends-list animated">
+          <h6 class="col">FRIENDS</h6>
+          <div class="carousel valign-wrapper">
+              <div class="fab-box left friendBtn">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </a>
+              </div>
+              <% if (friends.length === 0) { %>
+                  <div class="carousel-item"></div>
+              <% } else { %>
+                  <% friends.forEach(function(friend) { %>
+                      <% include ../../Components/Carousel/friendCarousel %>
+                  <% }) %>
+              <% } %>
+              <div class="fab-box right">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

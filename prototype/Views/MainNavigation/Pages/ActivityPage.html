@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link href="../../../public/stylesheets/Materialize/materialize.min.css" rel="stylesheet"/>
+    <link href="../../../public/stylesheets/MainNavigation/Pages/ActivityPage/ActivityPage.css" rel="stylesheet"/>
+    <link href="../../../public/stylesheets/MainNavigation/Components/CustomCarousel/CustomCarousel.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="chart_div"></div>
+    <!-- Div for the google chart -->
+
+    <section id=activity>
+      <!-- Suggested movies -->
+      <div class="unwatching-list">
+        <h6>SUGGESTED MOVIES</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+              <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/glass_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Glass</span><span class="movie-date">(2019)</span></div>
+                  <span class="movie-director">M. Night Shyamalan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/batman_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Batman</span><span class="movie-date">(2005)</span></div>
+                  <span class="movie-director">Christopher Nolan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/superman_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Man of steel</span><span class="movie-date">(2013)</span></div>
+                  <span class="movie-director">Zack Snyder</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/starwars_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Star Wars</span><span class="movie-date">(1977)</span></div>
+                  <span class="movie-director">George Lucas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/startrek_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Star Trek</span><span class="movie-date">(2009)</span></div>
+                  <span class="movie-director">J.J. Abrams</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/ironman_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Iron man</span><span class="movie-date">(2008)</span></div>
+                  <span class="movie-director">Jon Favreau</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="unwatching-list">
+        <h6>WATCHED MOVIES</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+              <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/glass_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Glass</span><span class="movie-date">(2019)</span></div>
+                  <span class="movie-director">M. Night Shyamalan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/batman_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Batman</span><span class="movie-date">(2005)</span></div>
+                  <span class="movie-director">Christopher Nolan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/superman_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Man of steel</span><span class="movie-date">(2013)</span></div>
+                  <span class="movie-director">Zack Snyder</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/starwars_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Star Wars</span><span class="movie-date">(1977)</span></div>
+                  <span class="movie-director">George Lucas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/startrek_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Star Trek</span><span class="movie-date">(2009)</span></div>
+                  <span class="movie-director">J.J. Abrams</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="../../../public/images/backdrops/ironman_backdrop.jpg">
+                <div class="card-text">
+                  <div><span class="movie-title">Iron man</span><span class="movie-date">(2008)</span></div>
+                  <span class="movie-director">Jon Favreau</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="row">
+      <div class="interactions">
+        <h6>Notifications</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna lorem, tristique nec erat eu, aliquet euismod mauris. Vestibulum consectetur viverra est quis scelerisque. Praesent et mauris mauris. Quisque vel tellus odio. Sed eget est
+          at massa luctus cursus nec vitae purus. Nullam condimentum nulla quam, in euismod risus tempor sed. Sed posuere feugiat leo nec scelerisque. Donec pellentesque vehicula leo eget hendrerit.</p>
+      </div>
+      <div class="interactions">
+        <h6>Recent Activity</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna lorem, tristique nec erat eu, aliquet euismod mauris. Vestibulum consectetur viverra est quis scelerisque. Praesent et mauris mauris. Quisque vel tellus odio. Sed eget est
+          at massa luctus cursus nec vitae purus. Nullam condimentum nulla quam, in euismod risus tempor sed. Sed posuere feugiat leo nec scelerisque. Donec pellentesque vehicula leo eget hendrerit.</p>
+      </div>
+      <div class="interactions">
+        <h6>Friend Activity</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna lorem, tristique nec erat eu, aliquet euismod mauris. Vestibulum consectetur viverra est quis scelerisque. Praesent et mauris mauris. Quisque vel tellus odio. Sed eget est
+          at massa luctus cursus nec vitae purus. Nullam condimentum nulla quam, in euismod risus tempor sed. Sed posuere feugiat leo nec scelerisque. Donec pellentesque vehicula leo eget hendrerit.</p>
+      </div>
+    </div>
+    <!-- Three divs which will be used as interactions which will display data from the data base -->
+    <footer>
+      <a href="PrivacyPolicy.html">Privacy Policy</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="../../../public/javascripts/Materialize/materialize.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../../../public/javascripts/Materialize/init.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Pages/ActivityPage/ActivityPage.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Components/CustomCarousel/CustomCarousel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<div class="carousel-item">
+    <div class="card hoverable">
+        <div class="card-image">
+            <img class="responsive-img poster z-depth-2" src="http://image.tmdb.org/t/p/w342/<%= movie.backdrop_path %>">
+            <div class="card-text">
+                <div><span class="movie-title"><%=movie.name%></span></div>
+                <span class="movie-date">(<%= getYear(movie.first_air_date) %>)</span>
+                <i class="material-icons remove-item">delete</i>
+            </div>
+        </div>
+    </div>
+</div>

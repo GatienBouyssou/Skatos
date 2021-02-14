@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="../../../public/stylesheets/Materialize/materialize.min.css">
+    <link rel="stylesheet" href="../../../public/stylesheets/MainNavigation/Pages/SettingsPage/SettingsPage.css">
+  </head>
+  <body>
+    <div id="pageContainer">
+        <img id="coverImage" src="../../../public/images/backdrops/batman_backdrop.jpg" alt="Cover picture" class="cover" >
+        <div class="centerElement">
+            <img id="profileImage" src="../../../public/images/profiles/gaetan.png" class="z-depth-3 pointer roundImage" />
+        </div>
+        <!--Form that change the informations of an user-->
+        <form id="settingsFormContainer" class="col s12 m5 container">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input placeholder="Username" id="usernameSignup" name="username" type="text" class="validate">
+                    <label for="usernameSignup">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m7">
+                    <input placeholder="First name" id="firstName" name="firstname" type="password" class="validate">
+                    <label for="firstName">First name</label>
+                </div>
+
+                <div class="input-field col s12 m5">
+                    <input placeholder="Surname" id="surname" name="surname" type="password" class="validate">
+                    <label for="surname">Surname</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12 m12">
+                    <input placeholder="email@example.com" id="email" name="email" type="email" class="validate">
+                    <label for="email">Your email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input placeholder="Password" id="passwordSignup" name="password" type="password" class="validate">
+                    <label for="passwordSignup">Password</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input placeholder="Password" id="passwordConfirm" name="confirmedPassword" type="password" class="validate">
+                    <label for="passwordConfirm">Confirm you password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 center-align">
+                    <input id="submitButtonSignup" type="submit" class="btn waves-effect waves-teal deep-purple" value="Commit the changes">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--the upload popup will be show to change the profile image-->
+    <div id="popupContainer" style="display: none;">
+        <div id="popup" class="row matchParent z-depth-3">
+            <div class="row">
+                <img id="closeImg" src="../../../public/images/icons/baseline_close_black_18dp.png" alt="close" class="pointer">
+            </div>
+            <form id="uploadForm" class="uploadingBox matchParent leaveSpaceTop" method="post" action="" enctype="multipart/form-data">
+                <div id="fileUploaderDiv" class="greyDashedBorder">
+                    <input id="fileUploader" class="matchParent" name="file" type="file" ><br>
+                </div>
+                <dib id="informationLabels" class="informationUpload">
+                    <span id="duringUpload" class="informationLabel">Drop to upload</span>
+                    <span id="errorUpload" class="errorLabel">We couldn't import your image for some reason</span><br>
+                    <label id="labelUpload"  for="fileUploader"><strong class="pointer">Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+
+                </dib>
+
+            </form>
+            <!--Confirmation popup appear after the upload of an image to confirm the changes-->
+            <div id="confirmationScreen" class="row" >
+                <div class="row">
+                    <span class="successfulLabel center centerElement">Image successfully uploaded !</span>
+                </div>
+                <img id="previewImage" src="" class="roundImage center-block leaveSpaceTop">
+                <div id="popupButtons" class="row leaveSpaceTop">
+                    <button id="cancelBtn" class="col s12 btn waves-effect waves-teal deep-purple">Cancel import</button>
+                    <button id="changeBtn" class="col s12 btn waves-effect waves-teal deep-purple">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="../../../public/javascripts/Materialize/materialize.min.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Pages/SettingsPage/SettingsPage.js"></script>
+  </body>
+</html>

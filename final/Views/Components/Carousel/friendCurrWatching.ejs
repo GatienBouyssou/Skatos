@@ -1,0 +1,15 @@
+<a id="<%= friend.startedSeries.id %>_tv" class="modal-trigger">
+    <div class="carousel-item">
+        <div class="card hoverable">
+            <img class="responsive-img poster z-depth-2" src="http://image.tmdb.org/t/p/w342/<%= friend.startedSeries.poster_path%>">
+            <div class="card-text">
+                <span class="movie-title"><%= friend.startedSeries.name %></span>
+                <div>
+                    <span class="movie-progress">E<%=friend.startedSeries.curEpisode%>S<%=friend.startedSeries.seasonNumber%></span>
+                </div>
+            </div>
+
+            <img class="responsive-img circle profile z-depth-2" src="/images/profiles/<%=friend.profilePicture%>">
+        </div>
+    </div>
+</a>

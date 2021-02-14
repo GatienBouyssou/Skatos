@@ -1,0 +1,14 @@
+<% if (locals.movies) { %>
+    <% movies.forEach(function(movie) { %>
+        <% if (movie.media_type !== "person") { %>
+            <li id="<%= movie.id %>_<%= movie.media_type %>" class="collection-item avatar valign-wrapper modal-trigger">
+                <img src="http://image.tmdb.org/t/p/w342/<%= movie.poster_path %>" class="circle"\>
+                <span class="title"><%= movie.title %></span>
+                <span class="title"><%= movie.name %></span>
+                <% if (locals.session.login) { %>
+                    <a id="watchLater" class="waves-effect secondary-content"><i class="material-icons">access_time</i></a>
+                <% } %>
+            </li>
+        <% } %>
+    <% }) %>
+<% } %>

@@ -1,0 +1,337 @@
+<div class="background"></div>
+<section class="section-welcome">
+  <a class="waves-effect waves-light btn deep-purple accent-4 connection-btn">log in</a>
+  <a class="waves-effect waves-light btn deep-purple accent-4 close-btn">close</a>
+  <div class="row">
+    <div class="col l8 right-part">
+      <div class="container titles">
+        <h1>Skatos.TV</h1>
+        <span>Welcome in the best app to track your movies and series activity.</span>
+      </div>
+
+      <div class="section-overview">
+        <div id="first-overview" class="part-overview">
+          <nav class="transparent z-depth-0 valign-wrapper">
+            <ul class="collapsible hoverable custom-searchbar">
+              <li>
+                <div class="collapsible-header valign-wrapper"><i class="material-icons">search</i>
+                  <input id="search-movie" type="" placeholder="Search movie and serie..."/>
+                </div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="unwatching-list some_more_space_top">
+            <h6>TOP PICS</h6>
+            <div class="carousel valign-wrapper">
+              <div class="fab-box left">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </a>
+              </div>
+              <% topMovies.forEach(function (movie) { %>
+                <% include ../../Components/Carousel/showItemWithPopup %>
+              <% }) %>
+              <div class="carousel-item"></div>
+              <div class="fab-box right">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#second-overview" class="btn-floating waves-effect waves-light deep-purple accent-4"><i class="material-icons">keyboard_arrow_down</i></a>
+        </div>
+        <div id="second-overview" class="part-overview">
+          <a href="#first-overview" class="btn-floating waves-effect waves-light deep-purple accent-4"><i class="material-icons">keyboard_arrow_up</i></a>
+          <p class="sentence">Create your list of movies and series that you want watch</p>
+          <div class="unwatching-list some_more_space_top">
+            <h6>WATCH LATER</h6>
+            <div class="carousel valign-wrapper">
+              <div class="fab-box left">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </a>
+              </div>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="/images/backdrops/glass_backdrop.jpg">
+                      <div class="card-text">
+                        <div><span class="movie-title">Glass</span><span class="movie-date">(2019)</span></div>
+                        <span class="movie-director">M. Night Shyamalan</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="/images/backdrops/batman_backdrop.jpg">
+                      <div class="card-text">
+                        <div><span class="movie-title">Batman</span><span class="movie-date">(2005)</span></div>
+                        <span class="movie-director">Christopher Nolan</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="/images/backdrops/superman_backdrop.jpg">
+                      <div class="card-text">
+                        <div><span class="movie-title">Man of steel</span><span class="movie-date">(2013)</span></div>
+                        <span class="movie-director">Zack Snyder</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="/images/backdrops/starwars_backdrop.jpg">
+                      <div class="card-text">
+                        <div><span class="movie-title">Star Wars</span><span class="movie-date">(1977)</span></div>
+                        <span class="movie-director">George Lucas</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="/images/backdrops/startrek_backdrop.jpg">
+                      <div class="card-text">
+                        <div><span class="movie-title">Star Trek</span><span class="movie-date">(2009)</span></div>
+                        <span class="movie-director">J.J. Abrams</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="/images/backdrops/ironman_backdrop.jpg">
+                      <div class="card-text">
+                        <div><span class="movie-title">Iron man</span><span class="movie-date">(2008)</span></div>
+                        <span class="movie-director">Jon Favreau</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="carousel-item"></div>
+              <div class="fab-box right">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#third-overview" class="btn-floating waves-effect waves-light deep-purple accent-4"><i class="material-icons">keyboard_arrow_down</i></a>
+        </div>
+        <div id="third-overview" class="part-overview">
+          <a href="#second-overview" class="btn-floating waves-effect waves-light deep-purple accent-4"><i class="material-icons">keyboard_arrow_up</i></a>
+          <p class="sentence">Stay up to date on your watching series</p>
+          <div class="watching-list">
+            <h6>CURRENTLY WATCHING</h6>
+            <div class="carousel valign-wrapper">
+              <div class="fab-box left">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <div class="card hoverable">
+                  <img class="responsive-img poster z-depth-2" src="/images/posters/punisher_poster.jpg">
+                  <div class="card-text">
+                    <span class="movie-title">Marvel's The Punisher</span>
+                    <div>
+                      <span class="movie-progress">E4S2</span>
+                    </div>
+                  </div>
+                  <a class="btn-floating btn-large waves-effect waves-light fab deep-purple accent-4"><i class="material-icons">fast_forward</i></a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card hoverable">
+                  <img class="responsive-img poster z-depth-2" src="/images/posters/got_poster.jpg">
+                  <div class="card-text">
+                    <span class="movie-title">Game of Thrones</span>
+                    <div>
+                      <span class="movie-progress">E3S5</span>
+                    </div>
+                  </div>
+                  <a class="btn-floating btn-large waves-effect waves-light fab deep-purple accent-4"><i class="material-icons">fast_forward</i></a>
+                </div>
+              </div>
+              </a>
+              <div class="carousel-item"></div>
+              <div class="fab-box right">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#fourth-overview" class="btn-floating waves-effect waves-light deep-purple accent-4"><i class="material-icons">keyboard_arrow_down</i></a>
+        </div>
+        <div id="fourth-overview" class="part-overview">
+          <a href="#third-overview" class="btn-floating waves-effect waves-light deep-purple accent-4"><i class="material-icons">keyboard_arrow_up</i></a>
+          <p class="sentence">And now you can add friends and follow their activities...</p>
+          <div class="watching-list">
+            <h6>FRIENDS WATCHING</h6>
+            <div class="carousel valign-wrapper">
+              <div class="fab-box left">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </a>
+              </div>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <img class="responsive-img poster z-depth-2" src="/images/posters/punisher_poster.jpg">
+                    <div class="card-text">
+                      <span class="movie-title">Marvel's The Punisher</span>
+                      <div>
+                        <span class="movie-progress">E4S2</span>
+                      </div>
+                    </div>
+                    <img class="responsive-img circle profile z-depth-2" src="/images/profiles/tim.jpeg">
+                  </div>
+                </div>
+              </a>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <img class="responsive-img poster z-depth-2" src="/images/posters/got_poster.jpg">
+                    <div class="card-text">
+                      <span class="movie-title">Game of Thrones</span>
+                      <div>
+                        <span class="movie-progress">E7S7</span>
+                      </div>
+                    </div>
+                    <img class="responsive-img circle profile z-depth-2" src="/images/profiles/gatien.jpeg">
+                  </div>
+                </div>
+              </a>
+              <a class="modal-trigger">
+                <div class="carousel-item">
+                  <div class="card hoverable">
+                    <img class="responsive-img poster z-depth-2" src="/images/posters/himym_poster.jpg">
+                    <div class="card-text">
+                      <span class="movie-title">How I Met Your Mother</span>
+                      <div>
+                        <span class="movie-progress">E5S2</span>
+                      </div>
+                    </div>
+                    <img class="responsive-img circle profile z-depth-2" src="/images/profiles/nauris.jpeg">
+                  </div>
+                </div>
+              </a>
+              <div class="carousel-item"></div>
+              <div class="fab-box right">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col l4 connection-card valign-wrapper">
+      <!-- Login/Signup Card -->
+      <div class="card deep-purple accent-4">
+        <div class="card-content social-container">
+          <p>Log In or Sign Up quickly with</p>
+          <div class="social-btn facebook z-depth-1 valign-wrapper tooltipped" data-position="left" data-tooltip="Coming soon !">
+              <span>Sign in with Facebook</span>
+            </div>
+          <div class="social-btn twitter z-depth-1 valign-wrapper tooltipped" data-position="left" data-tooltip="Coming soon !">
+            <span>Sign in with Twitter</span>
+          </div>
+          <div class="social-btn google z-depth-1 valign-wrapper tooltipped" data-position="left" data-tooltip="Coming soon !">
+            <span>Sign in with Google+</span>
+          </div>
+        </div>
+        <div class="card-tabs">
+          <p class="center-align">Or do that manually</p>
+          <ul class="tabs tabs-fixed-width tabs-transparent z-depth-2">
+            <li class="tab"><a id="tabLogIn" <%if(typeof signUpRes === "undefined"){%>class="active"<%}%>>Log In</a></li>
+            <li class="tab"><a id="tabSignUp" <%if(typeof signUpRes !== "undefined"){%>class="active"<%}%>>Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="card-content form-container deep-purple lighten-4">
+          <form action="/Connection" method="post" id="login_card" class="tab-content container center-align" name="signInForm">
+            <div class="input-field">
+              <input id="email_login" name="email" type="email" class="validate" required>
+              <label for="email_login">Email</label>
+            </div>
+            <div class="input-field">
+              <div class="bg"></div>
+              <input id="password_login" name="password" type="password" class="validate" required>
+              <label for="password_login">Password</label>
+            </div>
+            <input type="submit" class="waves-effect waves-light btn deep-purple accent-4" value="Submit">
+          </form>
+          <form action="/SignUp" method="post" id="signup_card" class="tab-content container center-align" name="signUpForm">
+            <div class="input-field">
+              <input id="username" name="username" type="text" class="validate" required>
+              <label for="username">Username</label>
+            </div>
+            <%if (typeof errorUsername !== 'undefined') {%>
+              <span class="errorLabel"><%=errorUsername%></span>
+            <%}%>
+            <div class="input-field">
+              <input id="email_signup" name="newEmail" type="text" class="validate" required>
+              <label for="email_signup">Email</label>
+            </div>
+            <%if (typeof errorEmail !== 'undefined') {%>
+              <span class="errorLabel"><%=errorEmail%></span>
+            <%}%>
+            <div class="input-field">
+              <input id="confirm_email" name="confirmationEmail" type="text" class="validate" required>
+              <label for="confirm_email">Confirm email</label>
+            </div>
+            <div class="input-field">
+              <div class="bg"></div>
+              <input id="password_signup" type="password" name="newPassword" class="validate" required>
+              <label for="password_signup">Password</label>
+            </div>
+            <%if (typeof errorPassword !== 'undefined') {%>
+              <span class="errorLabel"><%=errorPassword%></span><br>
+            <%}%>
+            <div class="input-field">
+              <div class="bg"></div>
+              <input id="confirm_password" name="confirmationPassword" type="password" class="validate" required>
+              <label for="confirm_password">Confirm password</label>
+            </div>
+            <input type="submit" class="waves-effect waves-light btn deep-purple accent-4" value="Submit">
+          </form>
+          <%if (typeof errorConnection !== 'undefined') {%>
+          <span class="errorLabel"><%=errorConnection%></span>
+          <%}%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include ../../Components/Modals/ModalReceiver -%>
+
+</section>

@@ -1,0 +1,12 @@
+html {
+    background-color: #cdc6df;
+    height: 100vh;
+    margin: 0;
+}
+
+#toast-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

@@ -1,0 +1,38 @@
+<div id="navigation">
+  <!-- Navigation Drawer -->
+  <ul id="slidenavPanel" class="sidenav sidenav-fixed z-depth-4">
+    <div class="user-view">
+      <div class="background">
+        <img src="/images/logo.png">
+      </div>
+      <div class="identification">
+        <div id="name" class="chip">
+          <img src="/images/profiles/<%= profilePicture %>" class="profilePicture">
+          <%= name %>
+        </div>
+        <a class="sidenav-trigger" data-target="settingsContent">
+          <div id="settings" class="chip waves-effect">
+            <i class="material-icons">settings</i>
+          </div>
+        </a>
+        <div id="exit" class="chip waves-effect tooltipped" data-position="right" data-tooltip="Log out">
+          <i class="material-icons">exit_to_app</i>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="menu">
+      <li class="button"><a class="btn deep-purple accent-4 waves-effect z-depth-3" page="/"><i class="material-icons">home</i>Home</a></li>
+      <li class="button"><a class="btn-flat waves-effect z-depth-3" page="/Profile"><i class="material-icons">person</i>Profile</a></li>
+      <li class="button"><a class="btn-flat waves-effect z-depth-3" page="/Activity"><i class="material-icons">assessment</i>Activity</a></li>
+    </div>
+  </ul>
+</div>
+<nav class="fake-nav z-depth-0">
+  <a id="sidenav-trigger" href="#" data-target="slidenavPanel" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+</nav>
+
+<div id="settingsPanel">
+  <ul id="settingsContent" class="sidenav setting-content">
+  </ul>
+</div>

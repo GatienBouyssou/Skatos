@@ -1,0 +1,109 @@
+<!-- Sliding panel never shown except when a friend picture is clicked -->
+<div id="friendSlidingPanel" class="slidingPanel z-depth-4">
+  <i id="closeFriend" class="material-icons closeBtn">close</i>
+  <iframe src="/FriendPage" frameborder="0"></iframe>
+</div>
+
+<!-- Friend search bar shown when the "add friend" button is clicked -->
+<nav id="friendSearchBar" class="transparent z-depth-0 valign-wrapper">
+  <ul class="collapsible hoverable custom-searchbar">
+    <li>
+      <div class="collapsible-header valign-wrapper"><i class="material-icons">search</i>
+        <input id="searchFriend" type="" placeholder="Search..."/>
+      </div>
+      <div class="collapsible-body">
+        <ul class="collection">
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <div class="overlay"></div>
+</nav>
+
+<!--Page fixed content -->
+<section>
+  <!-- User's profile picture and name -->
+  <header class="center-align">
+    <img class="circle responsive-img z-depth-3 profilePicture" src="/images/profiles/<%= profilePicture %>" />
+    <h3><b><%= name %></b></h3>
+  </header>
+  <!-- Favorite movies -->
+  <div class="unwatching-list">
+    <h6>FAVORITE MOVIES</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <div id="listOfFavMovies">
+        <% if (favMovies.length === 0) { %>
+          <div class="carousel-item"></div>
+        <% } else { %>
+          <% favMovies.forEach(function(movie) { %>
+            <% include ../../Components/Carousel/showItemWithPopup %>
+          <% }) %>
+        <% } %>
+      </div>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Favorite series -->
+  <div class="unwatching-list">
+    <h6>FAVORITE SERIES</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <div id="listOfFavSeries">
+        <% if (favSeries.length === 0) { %>
+          <div class="carousel-item"></div>
+        <% } else { %>
+          <% favSeries.forEach(function(movie) { %>
+            <% include ../../Components/Carousel/showTVShowWithPopup %>
+          <% }) %>
+        <% } %>
+      </div>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Friends list -->
+  <div>
+      <div id="profileFriends" class="friends-list">
+          <h6 class="col">FRIENDS</h6>
+          <div class="carousel valign-wrapper">
+              <div class="fab-box left friendBtn">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </a>
+              </div>
+            <div class="carousel-item" id="addBtn"><img src="/images/profiles/addbtn.jpg" class="responsive-img circle"></div>
+            <% friends.forEach(function(friend) { %>
+              <% include ../../Components/Carousel/friendCarousel %>
+            <% }) %>
+              <div class="fab-box right">
+                <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <%- include ../../Components/Modals/ModalReceiver -%>
+
+</section>
+
+
+
+

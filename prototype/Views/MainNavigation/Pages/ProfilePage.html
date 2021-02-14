@@ -1,0 +1,214 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS scripts import -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="../../../public/stylesheets/Materialize/materialize.min.css"/>
+    <link rel="stylesheet" href="../../../public/stylesheets/MainNavigation/Components/SlidingPanel/SlidingPanel.css"/>
+    <link rel="stylesheet" href="../../../public/stylesheets/MainNavigation/Components/CustomSearchBar/CustomSearchBar.css"/>
+    <link rel="stylesheet" href="../../../public/stylesheets/MainNavigation/Components/CustomCarousel/CustomCarousel.css"/>
+    <link rel="stylesheet" href="../../../public/stylesheets/MainNavigation/Pages/ProfilePage/ProfilePage.css"/>
+  </head>
+  <body>
+    <!-- Sliding panel never shown except when a friend picture is clicked -->
+    <div class="slidingPanel z-depth-4">
+      <i class="material-icons closeBtn">close</i>
+      <iframe src="FriendPage.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- Friend search bar shown when the "add friend" button is clicked -->
+    <nav class="transparent z-depth-0 valign-wrapper">
+      <ul class="collapsible hoverable custom-searchbar">
+        <li>
+          <div class="collapsible-header valign-wrapper"><i class="material-icons">search</i>
+            <input id="search-movie" type="" placeholder="Search..."/>
+          </div>
+          <div class="collapsible-body">
+            <ul class="collection">
+              <li class="collection-item avatar valign-wrapper">
+                <i class="material-icons circle green">person</i>
+                <span class="title">Name</span>
+                <a href="#!" class="waves-effect secondary-content"><i class="material-icons">person_add</i></a>
+              </li>
+              <li class="collection-item avatar valign-wrapper">
+                <i class="material-icons circle green">person</i>
+                <span class="title">Name</span>
+                <a href="#!" class="waves-effect secondary-content"><i class="material-icons">person_add</i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="overlay"></div>
+    </nav>
+
+    <!--Page fixed content -->
+    <section>
+      <!-- User's profile picture and name -->
+      <header class="center-align">
+        <img class="circle responsive-img z-depth-3" src="../../../public/images/profiles/gaetan.png"/>
+        <h3><b>Gaëtan Delalande</b></h3>
+      </header>
+      <!-- Favorite movies -->
+      <div class="unwatching-list">
+        <h6>FAVORITE MOVIES</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+              <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/glass_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">Glass</span><span class="movie-date">(2019)</span></div>
+                    <span class="movie-director">M. Night Shyamalan</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/batman_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">Batman</span><span class="movie-date">(2005)</span></div>
+                    <span class="movie-director">Christopher Nolan</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/superman_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">Man of steel</span><span class="movie-date">(2013)</span></div>
+                    <span class="movie-director">Zack Snyder</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/starwars_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">Star Wars</span><span class="movie-date">(1977)</span></div>
+                    <span class="movie-director">George Lucas</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/startrek_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">Star Trek</span><span class="movie-date">(2009)</span></div>
+                    <span class="movie-director">J.J. Abrams</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/ironman_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">Iron man</span><span class="movie-date">(2008)</span></div>
+                    <span class="movie-director">Jon Favreau</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favorite series -->
+      <div class="unwatching-list">
+        <h6>FAVORITE SERIES</h6>
+        <div class="carousel valign-wrapper">
+          <div class="fab-box left">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+              <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/himym_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">How I Met Your Mother</span></div>
+                    <span class="movie-director">M. Night Shyamalan</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card hoverable">
+              <div class="card-image">
+                  <img class="responsive-img" src="../../../public/images/backdrops/got_backdrop.jpg">
+                  <div class="card-text">
+                    <div><span class="movie-title">Game of Thrones</span></div>
+                    <span class="movie-director">Christopher Nolan</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item"></div>
+          <div class="fab-box right">
+            <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Friends list -->
+      <div>
+          <div class="friends-list">
+              <h6 class="col">FRIENDS</h6>
+              <div class="carousel valign-wrapper">
+                  <div class="fab-box left friendBtn">
+                    <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+                      <i class="material-icons">keyboard_arrow_left</i>
+                    </a>
+                  </div>
+                  <div class="carousel-item-f" id="addBtn"><img src="../../../public/images/profiles/addbtn.jpg" class="responsive-img circle"></div>
+                  <div class="carousel-item-f"><img src="../../../public/images/profiles/gatien.jpeg" class="responsive-img circle hoverable friend-pic"></div>
+                  <div class="carousel-item-f"><img src="../../../public/images/profiles/nauris.jpeg" class="responsive-img circle hoverable friend-pic"></div>
+                  <div class="carousel-item-f"><img src="../../../public/images/profiles/tim.jpeg" class="responsive-img circle hoverable friend-pic"></div>
+                  <div class="fab-box right">
+                    <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Javascript scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="../../../public/javascripts/Materialize/materialize.min.js"></script>
+    <script src="../../../public/javascripts/Materialize/init.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Pages/ProfilePage/ProfilePage.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Components/CustomCarousel/CustomCarousel.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Components/CustomSearchBar/CustomSearchBar.js"></script>
+    <script src="../../../public/javascripts/MainNavigation/Components/SlidingPanel/SlidingPanel.js"></script>
+  </body>
+</html>

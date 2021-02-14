@@ -1,0 +1,189 @@
+.background {
+  background-image: url("../../../../images/welcome-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+.errorLabel {
+  color: red;
+  font-weight: normal;
+  padding-top: 20px ;
+}
+
+.connection-btn {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin: 5%;
+}
+
+.close-btn {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin: 5%;
+}
+
+.connection-card input[type="submit"] {
+  color: white;
+}
+
+.section-welcome {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+  position: fixed;
+}
+
+.section-welcome .connection-card {
+  height: 100vh;
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.section-welcome .connection-card .card {
+  width: 100%;
+}
+
+.section-welcome .connection-card .card-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-welcome .connection-card .card-content #signup_card {
+  display: none;
+}
+
+.section-welcome .connection-card .social-btn {
+  width: 80%;
+  height: 3em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  border-radius: 2px;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.section-welcome .connection-card .social-btn:hover {
+  opacity: 1;
+}
+
+.section-welcome .connection-card .social-btn span {
+  text-align: center;
+  width: 100%;
+}
+
+.section-welcome .connection-card .social-btn.facebook {
+  background-color: #0d47a1;
+}
+
+.section-welcome .connection-card .social-btn.twitter {
+  background-color: #00b0ff;
+}
+
+.section-welcome .connection-card .social-btn.google {
+  background-color: red;
+}
+
+/* label color */
+.input-field label {
+}
+/* label focus color */
+.input-field input:focus + label {
+  color: purple !important;
+}
+/* label underline focus color */
+.input-field input:focus {
+  border-bottom: 1px solid purple !important;
+}
+/* valid color */
+.input-field input.valid {
+  border-bottom: 1px solid purple !important;
+}
+
+.section-welcome .right-part {
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+}
+
+.section-welcome .right-part .titles {
+  width: 100%;
+  height: 40vh;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-overview {
+  width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.section-overview .part-overview {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-overview .part-overview .btn-floating,
+.section-overview .part-overview .sentence{
+  align-self: center;
+  text-align: center;
+}
+
+.section-overview nav {
+  position: relative !important;
+  margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 991px) {
+  .connection-btn {
+    display: block;
+  }
+  .titles {
+    text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .section-overview nav {
+    padding: 0;
+  }
+  .section-overview nav .custom-searchbar {
+    width: 100%;
+  }
+  .connection-card {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0,0,0,.5);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .connection-card {
+    display: flex;
+  }
+  .connection-btn {
+    display: none;
+  }
+  .close-btn{
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

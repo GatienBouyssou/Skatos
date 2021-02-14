@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Compiled and minified CSS -->
+    <link href="../../public/stylesheets/Materialize/materialize.min.css" rel="stylesheet">
+    <link href="../../public/stylesheets/MainNavigation/MainNavigation.css" rel="stylesheet">
+    <link href="../../public/stylesheets/MainNavigation/Components/SlidingPanel/SlidingPanel.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="navigation">
+      <!-- Navigation Drawer -->
+      <ul id="slide-out" class="sidenav sidenav-fixed z-depth-4">
+        <div class="user-view">
+          <div class="background">
+            <img src="../../public/images/logo.png">
+          </div>
+        <div class="identification">
+          <a class='dropdown-trigger' href='#' data-target='dropdownLogout'>
+            <div class="chip waves-effect">
+              <img class="" src="../../public/images/profiles/gaetan.png">
+              Gaëtan D.
+            </div>
+          </a>
+          <ul id='dropdownLogout' class='dropdown-content'>
+            <li><a href="../index.html">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <li class="button"><a class="btn deep-purple accent-4 waves-effect z-depth-3" onclick="linkTo(this, 'HomePage')"><i class="material-icons">home</i>Home</a></li>
+      <li class="button"><a class="btn-flat waves-effect z-depth-3" onclick="linkTo(this, 'ProfilePage')"><i class="material-icons">person</i>Profile</a></li>
+      <li class="button"><a class="btn-flat waves-effect z-depth-3" onclick="linkTo(this, 'ActivityPage')"><i class="material-icons">assessment</i>Activity</a></li>
+      <li id="settingsButton" class="button"><a class="btn-flat waves-effect z-depth-3"><i class="material-icons">settings</i>Settings</a></li>
+      <!--<div class="bottom">
+        <li><div class="divider"></div></li>
+        <li class="button"><a class="btn-flat waves-effect z-depth-3" onclick="linkTo(this, 'AboutPage')"><i class="material-icons">info</i>About</a></li>
+      </div>-->
+    </ul>
+
+    <nav class="fake-nav z-depth-0">
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+
+    <div id="settingsPanel" class="slidingPanel z-depth-4" >
+      <i class="material-icons closeBtn">close</i>
+      <iframe src="./Pages/SettingsPage.html" frameborder="0"></iframe>
+    </div>
+
+    <iframe id="PageContent" src="./Pages/HomePage.html"></iframe>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="../../public/javascripts/Materialize/materialize.min.js"></script>
+    <script src="../../public/javascripts/Materialize/init.js"></script>
+    <script src="../../public/javascripts/MainNavigation/routing.js"></script>
+    <script src="../../public/javascripts/MainNavigation/Components/SlidingPanel/SlidingPanel.js"></script>
+    <script src="../../public/javascripts/MainNavigation/Pages/SettingsPage/SlidingAdaptations.js"></script>
+  </body>
+</html>

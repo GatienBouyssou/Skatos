@@ -1,0 +1,83 @@
+nav {
+    margin-bottom: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-searchbar {
+    position: absolute;
+    z-index: 10;
+    width: 60%;
+    top: 0;
+    color: black
+}
+
+.custom-searchbar li {
+    width: 100%;
+    border: 0
+}
+
+.custom-searchbar li .collapsible-header {
+    height: 4em;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    border: 0;
+    border-radius: 3px
+}
+
+.custom-searchbar li .collapsible-header input {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0);
+    border: none
+}
+
+.custom-searchbar li .collapsible-header input::placeholder {
+    color: gray
+}
+
+.custom-searchbar li .collapsible-header input:focus {
+    outline: none
+}
+
+.custom-searchbar li .collapsible-body {
+    border: 0;
+    border-radius: 3px;
+    background-color: white;
+    max-height: 50vh;
+    overflow: scroll;
+    padding: 0
+}
+
+.custom-searchbar li .collapsible-body ul {
+    top: 0;
+    width: 100%
+}
+
+.custom-searchbar li .collapsible-body ul li {
+    cursor: pointer
+}
+
+.custom-searchbar li .collapsible-body ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0 !important;
+  margin: 0 !important;
+  left: 0 !important;
+  position: fixed;
+  background-color: black;
+  opacity: .5;
+  z-index: 9;
+}
+
+.collapsible {
+    border: 0;
+    border-radius: 3px;
+    background-color: white
+}

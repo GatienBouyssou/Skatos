@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Skatos TV</title>
+
+    <!--Import Google Icon Font and Materialize stylesheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/stylesheets/Materialize/materialize.min.css" rel="stylesheet">
+    <link href="/stylesheets/index/index.css" rel="stylesheet">
+
+    <!-- Content stylesheet -->
+    <%- include(links); -%>
+
+    <!-- TODO: try to put it at start of all bottom scripts-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+-->
+  </head>
+  <body>
+    <!-- Content body -->
+    <%- include(body); -%>
+
+    <!-- Page content, load on ajax call -->
+    <div id="PageContent">
+      <%- include(page); -%>
+    </div>
+
+    <!-- All Scripts -->
+    <script src="/javascripts/Materialize/materialize.min.js"></script>
+    <script src="/javascripts/Materialize/init.js"></script>
+
+    <!-- Content Scripts -->
+    <%- include(scripts); -%>
+  </body>
+</html>

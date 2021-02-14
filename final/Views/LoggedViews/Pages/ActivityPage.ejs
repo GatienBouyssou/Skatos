@@ -1,0 +1,70 @@
+<div id="chart_div"></div>
+<!-- Div for the google chart -->
+
+<section id=activity>
+  <!-- Suggested movies -->
+  <div class="unwatching-list">
+    <h6>SUGGESTED MOVIES</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <% suggestedMovies.forEach(function (movie) { %>
+          <% include ../../Components/Carousel/showItemWithPopup %>
+      <% }) %>
+    <div class="carousel-item"></div>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="unwatching-list">
+    <h6>WATCHED MOVIES</h6>
+    <div class="carousel valign-wrapper">
+      <div class="fab-box left">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselBack(this)">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+      </div>
+      <% watchedMovies.forEach(function (movie) { %>
+        <% include ../../Components/Carousel/showItemWithPopup %>
+      <% }) %>
+      <div class="carousel-item"></div>
+      <div class="fab-box right">
+        <a class="btn-floating waves-effect waves-light deep-purple accent-4 fab" onclick="carouselNext(this)">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="row">
+  <div class="interactions">
+    <h6>Notifications</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna lorem, tristique nec erat eu, aliquet euismod mauris. Vestibulum consectetur viverra est quis scelerisque. Praesent et mauris mauris. Quisque vel tellus odio. Sed eget est
+      at massa luctus cursus nec vitae purus. Nullam condimentum nulla quam, in euismod risus tempor sed. Sed posuere feugiat leo nec scelerisque. Donec pellentesque vehicula leo eget hendrerit.</p>
+  </div>
+  <div class="interactions">
+    <h6>Recent Activity</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna lorem, tristique nec erat eu, aliquet euismod mauris. Vestibulum consectetur viverra est quis scelerisque. Praesent et mauris mauris. Quisque vel tellus odio. Sed eget est
+      at massa luctus cursus nec vitae purus. Nullam condimentum nulla quam, in euismod risus tempor sed. Sed posuere feugiat leo nec scelerisque. Donec pellentesque vehicula leo eget hendrerit.</p>
+  </div>
+  <div class="interactions">
+    <h6>Friend Activity</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna lorem, tristique nec erat eu, aliquet euismod mauris. Vestibulum consectetur viverra est quis scelerisque. Praesent et mauris mauris. Quisque vel tellus odio. Sed eget est
+      at massa luctus cursus nec vitae purus. Nullam condimentum nulla quam, in euismod risus tempor sed. Sed posuere feugiat leo nec scelerisque. Donec pellentesque vehicula leo eget hendrerit.</p>
+  </div>
+</div>
+<!-- Three divs which will be used as interactions which will display data from the data base -->
+<footer>
+</footer>
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/javascripts/MainNavigation/Pages/ActivityPage/ActivityPage.js"></script>
+
